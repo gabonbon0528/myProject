@@ -1,0 +1,235 @@
+@import url(all.css);
+
+/* ======== bg_elements ======= */
+
+.star1{
+    display: none;
+}
+
+.touching_finger{
+    width: auto;
+    left: 80px;
+    display: none;
+}
+
+.canele{
+    display: none;
+}
+
+/* ======== main_block ======= */
+
+.main_block {}
+
+/* ======== text_block1 ======= */
+
+.text_block1{
+    width: 100%;
+    height: 324px;
+    position: relative;
+}
+
+.text_block1 h2{
+    position: absolute;
+    top: 140px;
+    left: 80px;
+}
+
+.text_block1 p{
+    width: 630px;
+    line-height: 1.8;
+    position: absolute;
+    top: 90px;
+    right: 90px;
+}
+
+.img1{
+    display: block;
+    width: 60%;
+}
+
+.img_block{
+    position: relative;
+}
+
+.ab_logo{
+    display: block;
+    width: 10%;
+    height: 100%;
+    padding: 0 200px;
+
+    background-image: radial-gradient(circle at center, transparent 10%, white 10%);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+
+    z-index: 2;
+}
+
+/* ======== text_block2 ======= */
+
+.text_block2{
+    position: relative;
+    height: 544px;
+
+}
+
+.text_block2 h2{
+    position: absolute;
+    top: 100px;
+    right: 50px;
+}
+
+.text_block2 p{
+    width: 630px;
+    line-height: 1.8;
+
+    position: absolute;
+    top: 250px;
+    left: 50px;
+}
+
+.img2{
+    display: block;
+    width: 100%;
+}
+
+/* ======== text_block3 ======= */
+
+.text_block3{
+    padding-top: 100px;
+    text-align: center;
+    position: relative;
+}
+
+.text_block3 a{
+    position: absolute;
+    top: 860px;
+    right: 550px;
+
+    display: block;
+    line-height: 60px;
+    width: 160px;
+    background-color: #fff;
+
+    transition: .5s;
+}
+
+.text_block3 a:hover{
+    transform: scale(1.1);
+}
+
+.angel1{
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.brownie1{
+    width: 70px;
+    position: absolute;
+    top: 250px;
+    right: 220px;
+
+    animation-name: sparkle;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.madeline1{
+    width: 70px;
+    position: absolute;
+    top: 450px;
+    right: 130px;
+
+    animation-name: sparkle;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: .5s;
+}
+
+.canele1{
+    width: 70px;
+    position: absolute;
+    top: 640px;
+    right: 300px;
+
+    animation-name: sparkle;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.cookie1{
+    width: 70px;
+    position: absolute;
+    top: 450px;
+    left: 130px;
+
+    animation-name: sparkle;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: .5s;
+}
+
+.daquiose1{
+    width: 70px;
+    position: absolute;
+    top: 640px;
+    left: 300px;
+
+    animation-name: sparkle;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.sesame1{
+    width: 70px;
+    position: absolute;
+    top: 250px;
+    left: 220px;
+
+    animation-name: sparkle;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes sparkle{
+    0%{
+        transform: rotate(-25deg);
+    }
+
+    50%{
+        transform: rotate(25deg)
+    }
+    
+    100%{
+        transform: rotate(-25deg)
+    }
+}
+
+@keyframes floating{
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

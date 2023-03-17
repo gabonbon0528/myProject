@@ -1,0 +1,319 @@
+@import url(all.css);
+
+/* ======== top ======= */
+
+.kv{
+    position: relative;
+    height: 1550px;
+}
+
+.kv .title{
+    position: absolute;
+    top: 178px;
+    left: 88px;
+}
+
+.kv .title a{
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+    position: absolute;
+    top: 285px;
+    left: 220px;
+}
+
+.kv .arch{
+    position: absolute;
+    top: 110px;
+    right: 210px;
+}
+
+.kv .stair{
+    position: absolute;
+    top: 410px;
+    right: 10px;
+}
+
+.canele1{
+    position: absolute;
+    transform: scale(.08);
+    top: 285px;
+    right: 220px;
+
+}
+
+.daquoise1{
+    position: absolute;
+    transform: scale(.1);
+    top: 397px;
+    right: 171px;
+
+}
+
+.macaron1{
+    position: absolute;
+    transform: scale(.12) rotate(110deg);
+    top: 450px;
+    right: 80px;
+
+}
+
+.canele2{
+    position: absolute;
+    transform: scale(.13);
+    top: 612px;
+    right: -86px;
+
+}
+
+.daquoise2{
+    position: absolute;
+    transform: scale(.15);
+    top: 833px;
+    right: -76px;
+
+}
+
+.macaron2{
+    position: absolute;
+    transform: scale(.16) rotate(135deg);
+    top: 906px;
+    right: 83px;
+
+}
+
+.angelm{
+    position: absolute;
+    transform: scale(-0.3, 0.3);
+    top: 800px;
+    right: 206px;
+
+}
+
+.star2{
+    position: absolute;
+    transform: scale(.7);
+    top: 1366px;
+    right: 721px;
+
+}
+
+/* ======== main ======= */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(17, 110px);
+    column-gap: 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". product1 product1 . . . . . . . . . "
+      ". product1 product1 product2 product2 . . . . . . . "
+      ". product1 product1 product2 product2 product3 product3 . . . . . "
+      ". . . product2 product2 product3 product3 . . . . . "
+      ". . . . . product3 product3 . . . . . "
+      ". . . . . . . . . . . . "
+      ". . . . . . . news news news news news "
+      ". . . . . . . news news news news news "
+      ". . . . . . . news news news news news "
+      ". . . . . . . news news news news news "
+      ". . . . . . . news news news news news "
+      ". . . . . . . news news news news news "
+      ". calender calender calender calender . . . . . . . "
+      ". calender calender calender calender . . . . . . . "
+      ". calender calender calender calender . . . . . . . "
+      ". calender calender calender calender . . . . . . . "
+      ". calender calender calender calender . . . . . . . "
+}
+
+/* ======== product ======= */
+
+.product1{
+    grid-area: product1; 
+    position: relative;
+
+}
+
+.product2{
+    grid-area: product2; 
+    position: relative;
+
+}
+
+.product3{
+    grid-area: product3; 
+    position: relative;
+
+}
+
+.product1 img, .product2 img, .product3 img{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -80px;
+}
+
+.product1::after, .product2::after, .product3::after{
+    content: url(/img/index/arch_border.svg);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    z-index: -1;
+}
+
+.mask1{
+    display: block;
+    width: 100%;
+    height: 291px;
+    background: url("/img/index/product_cake.jpg") no-repeat top center;
+    background-size: cover;
+    -webkit-mask: url("/img/index/arch_mask.png") no-repeat center center;
+    mask: url("/img/index/arch_mask.png") no-repeat center center;
+}
+
+.mask2{
+    display: block;
+    width: 100%;
+    height: 291px;
+    background: url("/img/index/product_canele.jpg") no-repeat top center;
+    background-size: cover;
+    -webkit-mask: url("/img/index/arch_mask.png") no-repeat center center;
+    mask: url("/img/index/arch_mask.png") no-repeat center center;
+}
+
+.mask3{
+    display: block;
+    width: 100%;
+    height: 291px;
+    background: url("/img/index/product_macaron.jpg") no-repeat top center;
+    background-size: cover;
+    -webkit-mask: url("/img/index/arch_mask.png") no-repeat center center;
+    mask: url("/img/index/arch_mask.png") no-repeat center center;
+}
+
+/* ======== news ======= */
+
+.news { 
+    grid-area: news;
+    background-image: url(/img/index/news_bg.png);
+    background-size: cover;
+    background-position: 0 -35px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.news img{
+    position: absolute;
+    top: -320px;
+    left: 100px;
+    transform: scale(.8);
+}
+
+.news_content h1{
+    text-align: center;;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.news_content a{
+    display: block;
+    text-align: center;
+    line-height: 2;
+
+    transition: .5s;
+}
+
+.news_content a:hover{
+    transform: scale(1.1);
+}
+
+
+.news_content a p{
+    letter-spacing: 1px;
+}
+
+/* ======== calender ======= */
+
+.calender { 
+    grid-area: calender; 
+    position: relative;
+    background-image: url(/img/index/calender_bg_arch.png);
+    background-size: cover;
+}
+
+.calender .angel2{
+    transform: scaleX(-1);
+    position: absolute;
+    top: -555px;
+    left: -250px;
+    z-index: -1;
+}
+
+.calender .available{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -111px;
+}
+
+.calender h3{
+    text-align: center;
+    padding-top: 80px;
+}
+
+.date{
+    width: 70%;
+    text-align: center;
+    padding: 40px 15% 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.date li{
+    font-size: 20px;
+    line-height: 2;
+    flex-basis: calc(100% / 7);
+    position: relative;
+    z-index: 1;
+}
+
+.date li:nth-child(25){
+    overflow: hidden;
+    border-radius: 50%;
+
+}
+
+.date li:nth-child(25):after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0;
+}
+.calender .description{
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 30px;
+}
+
+.calender a{
+    display: block;
+    font-size: 40px;
+    line-height: 1;
+    text-align: center;
+
+    transition: .5s;
+}
+.calender a:hover{
+    transform: scale(1.1);
+    color: #fff;
+
+}
+

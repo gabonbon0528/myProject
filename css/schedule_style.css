@@ -1,0 +1,19 @@
+@import url(all.css);
+
+/* ======== bg_elements ======= */
+
+.star1{
+    display: none;
+}
+
+.touching_finger{
+    width: auto;
+    left: 80px;
+    display: none;
+}
+
+.canele{
+    display: none;
+}
+
+/* ======== description_block ======= */
