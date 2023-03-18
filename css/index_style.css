@@ -155,7 +155,7 @@
 }
 
 .product1::after, .product2::after, .product3::after{
-    content: url(/img/index/arch_border.svg);
+    content: url(./img/index/arch_border.svg);
     position: absolute;
     top: -10px;
     left: 10px;
@@ -166,37 +166,37 @@
     display: block;
     width: 100%;
     height: 291px;
-    background: url("/img/index/product_cake.jpg") no-repeat top center;
+    background: url("./img/index/product_cake.jpg") no-repeat top center;
     background-size: cover;
-    -webkit-mask: url("/img/index/arch_mask.png") no-repeat center center;
-    mask: url("/img/index/arch_mask.png") no-repeat center center;
+    -webkit-mask: url("./img/index/arch_mask.png") no-repeat center center;
+    mask: url("./img/index/arch_mask.png") no-repeat center center;
 }
 
 .mask2{
     display: block;
     width: 100%;
     height: 291px;
-    background: url("/img/index/product_canele.jpg") no-repeat top center;
+    background: url("./img/index/product_canele.jpg") no-repeat top center;
     background-size: cover;
-    -webkit-mask: url("/img/index/arch_mask.png") no-repeat center center;
-    mask: url("/img/index/arch_mask.png") no-repeat center center;
+    -webkit-mask: url("./img/index/arch_mask.png") no-repeat center center;
+    mask: url("./img/index/arch_mask.png") no-repeat center center;
 }
 
 .mask3{
     display: block;
     width: 100%;
     height: 291px;
-    background: url("/img/index/product_macaron.jpg") no-repeat top center;
+    background: url("./img/index/product_macaron.jpg") no-repeat top center;
     background-size: cover;
-    -webkit-mask: url("/img/index/arch_mask.png") no-repeat center center;
-    mask: url("/img/index/arch_mask.png") no-repeat center center;
+    -webkit-mask: url("./img/index/arch_mask.png") no-repeat center center;
+    mask: url("./img/index/arch_mask.png") no-repeat center center;
 }
 
 /* ======== news ======= */
 
 .news { 
     grid-area: news;
-    background-image: url(/img/index/news_bg.png);
+    background-image: url(./img/index/news_bg.png);
     background-size: cover;
     background-position: 0 -35px;
     background-repeat: no-repeat;
@@ -238,7 +238,7 @@
 .calender { 
     grid-area: calender; 
     position: relative;
-    background-image: url(/img/index/calender_bg_arch.png);
+    background-image: url(./img/index/calender_bg_arch.png);
     background-size: cover;
 }
 
