@@ -7,7 +7,7 @@ body{
     box-sizing: border-box;
     font-family: 'Noto Sans TC', sans-serif;
     font-family: 'Noto Serif TC', serif;
-    background-image: url(/img/all/bg-cloud.png);
+    background-image: url(./img/all/bg-cloud.png);
     background-size: cover;
     background-position: top 500px;
     background-repeat: no-repeat;

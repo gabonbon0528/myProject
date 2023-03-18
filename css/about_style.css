@@ -93,7 +93,8 @@
 
 .img2{
     display: block;
-    width: 100%;
+    width: auto;
+    margin: 0 auto;
 }
 
 /* ======== text_block3 ======= */
