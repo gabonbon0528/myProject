@@ -1,4 +1,4 @@
-@import url(all.css);
+@import url('all.css');
 
 /* ======== bg_elements ======= */
 
@@ -172,13 +172,13 @@
 
 .show_card1, .show_card2{
     width: 486px;
-    background-image: url(../img/schedule/showcard_bg_blue.svg);
+    background-image: url('../img/schedule/showcard_bg_blue.svg');
 
     position: relative;
 }
 
 .show_card2{
-    background-image: url(../img/schedule/showcard_bg_green.svg);
+    background-image: url('../img/schedule/showcard_bg_green.svg');
 }
 
 .show_card_text{

@@ -1,4 +1,4 @@
-@import url(all.css);
+@import url('all.css');
 
 /* ======== bg_elements ======= */
 
@@ -156,7 +156,7 @@
 }
 
 .product_card{
-    background-image: url('/img/product_list/bg_product_card.svg');
+    background-image: url('./img/product_list/bg_product_card.svg');
     background-repeat: no-repeat;
     background-size: contain;
 

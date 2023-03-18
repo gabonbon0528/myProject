@@ -1,4 +1,4 @@
-@import url(reset.css);
+@import url('reset.css');
 
 body{
     font-family: "noto sans tc", 'Times New Roman', Times, serif;
@@ -7,7 +7,7 @@ body{
     box-sizing: border-box;
     font-family: 'Noto Sans TC', sans-serif;
     font-family: 'Noto Serif TC', serif;
-    background-image: url(../img/all/bg-cloud.png);
+    background-image: url('../img/all/bg-cloud.png');
     background-size: cover;
     background-position: top 500px;
     background-repeat: no-repeat;
@@ -158,14 +158,14 @@ nav ul li a{
 
 nav .logo{
     height: 60px;
-    background-image: url(/img/all/logo.svg);
+    background-image: url('./img/all/logo.svg');
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 nav .cart{
     height: 60px;
-    background-image: url(/img/all/cart.svg);
+    background-image: url('./img/all/cart.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 20% auto;
@@ -211,7 +211,7 @@ nav .cart{
 /* ======== footer ======= */
 
 .footer{
-    background-image: url(/img/all/footer_cloud.png);
+    background-image: url('./img/all/footer_cloud.png');
     background-position: 0 -10px;
     background-size: cover;
     background-repeat: no-repeat;
