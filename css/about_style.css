@@ -203,34 +203,3 @@
     animation-iteration-count: infinite;
 }
 
-@keyframes sparkle{
-    0%{
-        transform: rotate(-25deg);
-    }
-
-    50%{
-        transform: rotate(25deg)
-    }
-    
-    100%{
-        transform: rotate(-25deg)
-    }
-}
-
-@keyframes floating{
-    0%{
-        transform: translateY(0px);
-    }
-    25%{
-        transform: translateY(10px);
-    }
-    50%{
-        transform: translateY(0px);
-    }
-    75%{
-        transform: translateY(-10px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}

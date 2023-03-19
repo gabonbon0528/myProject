@@ -16,10 +16,22 @@
 .kv .title a{
     display: flex;
     align-items: center;
-    line-height: 30px;
+    
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 1;
+    text-align: center;
+
     position: absolute;
     top: 285px;
     left: 220px;
+
+    transition: .5s;
+}
+
+.kv .title a:hover{
+    transform: scale(1.1);
 }
 
 .kv .arch{
@@ -162,41 +174,40 @@
     z-index: -1;
 }
 
-.mask1{
+.mask1, .mask2, .mask3{
     display: block;
     width: 100%;
     height: 291px;
-    background: url("../img/index/product_cake.jpg") no-repeat top center;
-    background-size: cover;
-    -webkit-mask: url("./img/index/arch_mask.png") no-repeat center center;
+    -webkit-mask: url("../img/index/arch_mask.png") no-repeat center center;
     mask: url("../img/index/arch_mask.png") no-repeat center center;
+    
+    transition: .3s;
+}
+
+.mask1{
+    background: url("../img/index/product_cake.png") no-repeat top center;
+    background-size: cover;
 }
 
 .mask2{
-    display: block;
-    width: 100%;
-    height: 291px;
-    background: url("../img/index/product_canele.jpg") no-repeat top center;
+    background: url("../img/index/product_canele.png") no-repeat top center;
     background-size: cover;
-    -webkit-mask: url("../img/index/arch_mask.png") no-repeat center center;
-    mask: url("../img/index/arch_mask.png") no-repeat center center;
 }
 
 .mask3{
-    display: block;
-    width: 100%;
-    height: 291px;
-    background: url("../img/index/product_macaron.jpg") no-repeat top center;
+    background: url("../img/index/product_macaron.png") no-repeat top center;
     background-size: cover;
-    -webkit-mask: url("../img/index/arch_mask.png") no-repeat center center;
-    mask: url("../img/index/arch_mask.png") no-repeat center center;
+}
+
+.mask1:hover, .mask2:hover, .mask3:hover{
+    transform: rotate(15deg) scale(1.1) translate(20px, -20px);
 }
 
 /* ======== news ======= */
 
 .news { 
     grid-area: news;
-    background-image: url('./img/index/news_bg.png');
+    background-image: url('../img/index/news_bg.png');
     background-size: cover;
     background-position: 0 -35px;
     background-repeat: no-repeat;
@@ -228,9 +239,27 @@
     transform: scale(1.1);
 }
 
-
 .news_content a p{
     letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.news_content .refer{
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 1;
+    text-align: center;
+
+    padding-top: 20px;
+
+    transition: .5s;
+}
+
+.news_content .refer:hover{
+    transform: scale(1.1);
+    color: #fff;
 }
 
 /* ======== calender ======= */
@@ -238,7 +267,7 @@
 .calender { 
     grid-area: calender; 
     position: relative;
-    background-image: url('./img/index/calender_bg_arch.png');
+    background-image: url('../img/index/calender_bg_arch.png');
     background-size: cover;
 }
 
@@ -305,7 +334,9 @@
 
 .calender a{
     display: block;
-    font-size: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
     line-height: 1;
     text-align: center;
 
@@ -314,6 +345,5 @@
 .calender a:hover{
     transform: scale(1.1);
     color: #fff;
-
 }
 

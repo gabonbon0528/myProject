@@ -75,6 +75,21 @@ p{
 
 }
 
+input[type='submit']{
+    border: none;
+    margin: 20px 0;
+
+    background-color: #98A498;
+    color: #fff;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+    font-family: 'noto serif tc';
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
 /* ======== bg ======= */
 
 .bg_elements{
@@ -133,6 +148,11 @@ p{
     top: 400px;
     right: 40px;
 
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
 }
 
 /* ======== nav ======= */
@@ -154,18 +174,24 @@ nav ul li a{
     width: 140px;
     line-height: 60px;
     text-align: center;
+
+    transition: .4s;
+}
+
+nav ul li a:hover{
+    font-weight: bold;
 }
 
 nav .logo{
     height: 60px;
-    background-image: url('./img/all/logo.svg');
+    background-image: url('../img/all/logo.svg');
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 nav .cart{
     height: 60px;
-    background-image: url('./img/all/cart.svg');
+    background-image: url('../img/all/cart.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 20% auto;
@@ -211,8 +237,8 @@ nav .cart{
 /* ======== footer ======= */
 
 .footer{
-    background-image: url('./img/all/footer_cloud.png');
-    background-position: 0 -10px;
+    background-image: url('../img/all/footer_cloud.png');
+    background-position: 0 -20px;
     background-size: cover;
     background-repeat: no-repeat;
     height: 450px;
@@ -223,6 +249,7 @@ nav .cart{
     display: flex;
     text-align: left;
     justify-content: center;
+    align-items: center;
 }
 
 .footer ul li{
@@ -233,4 +260,41 @@ nav .cart{
 .footer ul li a{
     line-height: 60px;
     font-size: 16px;
+}
+
+.footer ul li a img{
+    display: block;
+}
+
+
+@keyframes sparkle{
+    0%{
+        transform: rotate(-25deg);
+    }
+
+    50%{
+        transform: rotate(25deg)
+    }
+    
+    100%{
+        transform: rotate(-25deg)
+    }
+}
+
+@keyframes floating{
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }

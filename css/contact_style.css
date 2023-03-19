@@ -1,0 +1,66 @@
+@import url('all.css');
+
+/* ======== bg_elements ======= */
+
+.star1{
+    display: none;
+}
+
+.touching_finger{
+    width: auto;
+    left: 80px;
+    display: none;
+}
+
+.canele{
+    display: none;
+}
+
+/* ======== main_block ======= */
+
+.main_block h3{
+    text-align: center;
+    margin: 50px auto;
+}
+
+.hahaha{
+    display: flex;
+    align-items: flex-start;
+}
+
+.hahaha img{
+    display: block;
+}
+
+
+/* ======== contact_block ======= */
+
+.contact_block{
+    margin: 0 auto;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 90px;
+}
+
+.contact_block form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+
+.contact_block form label, .contact_block form input, .contact_block form textarea{
+    margin-bottom: 20px;
+}
+
+input[type='submit']{
+    border: none;
+    margin: 20px 0;
+
+    background-color: #98A498;
+    color: #fff;
+    line-height: 3;
+    border-radius: 5px;
+
+    cursor: pointer;
+}

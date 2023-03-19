@@ -27,7 +27,7 @@
 /* ======== left_column ======= */
 
 .left_column{
-    margin: 0 95px;
+    margin: 0 85px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -70,6 +70,11 @@
     display: block;
     width: 100px;
     margin: 0 auto;
+
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 .left_column a span{
@@ -156,10 +161,6 @@
 }
 
 .product_card{
-    background-image: url('./img/product_list/bg_product_card.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-
     width: 170px;
     height: 260px;
 
@@ -188,15 +189,8 @@
     padding-top: 10px;
 }
 
-.product_card input{
-    border: none;
-    margin: 20px 0;
-
-    color: #98A498;
-    line-height: 1.5;
-    border-radius: 5px;
-
-    cursor: pointer;
+.product_card input[type='submit']{
+    width: 150px;
 }
 
 .product_card input:hover{
