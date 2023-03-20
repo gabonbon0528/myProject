@@ -30,19 +30,19 @@
     background-color: #CDD9DD;
     width: 500px;
     height: 500px;
-    border-radius: 50%;
+    border-radius: 50% 50% 0 0;
 
     position: relative;
 }
 
 .schedule h2{
-    padding-bottom: 30px;
-    padding-top: 80px;
+    padding-bottom: 60px;
+    padding-top: 50px;
     text-align: center;
 }
 
 .schedule form{
-    margin-top: 20px;
+    margin-top: 30px;
     position: relative;
     text-align: center;
 }
@@ -84,8 +84,9 @@
 }
 
 .show_card1, .show_card2{
-    width: 60%;
-    margin: 0 auto;
+    width: 70%;
+    margin: 20px auto;
+    border-bottom: 1px solid #3A302A;
     position: relative;
 }
 
@@ -168,9 +169,9 @@
 }
 
 .descrp_img{
-    width: 100px;
-    height: 100px;
-    background-color: #fff;
+    width: 70px;
+    height: 70px;
+    /* background-color: #fff; */
     border-radius: 50%;
     margin-right: 10px;
     margin-bottom: 20px;
@@ -185,12 +186,12 @@
 
 .descrp_img img{
     display: block;
-    height: 60px;
+    height: 40px;
     width: auto;
 }
 
 .descrp_img .shadow{
-    width: 68px;
+    width: 60px;
     position: absolute;
     bottom: -20px;
     z-index: -1;
@@ -226,7 +227,7 @@
 
 .calender ul li {
     cursor: pointer;
-    padding: 10px;
+    padding: 15px;
 
     display: flex;
     flex-direction: column;
@@ -239,7 +240,7 @@
 
 .calender ul li img{
     display: block;
-    width: 30px;
+    width: 25px;
     margin-bottom: 10px;
 }
 
