@@ -23,20 +23,10 @@
     margin: 50px auto;
 }
 
-.hahaha{
-    display: flex;
-    align-items: flex-end;
-}
-
-.hahaha img{
-    display: block;
-}
-
-
 /* ======== contact_block ======= */
 
 .contact_block{
-    margin: 0 auto;
+    margin: 0 200px;
     background-color: #fff;
     box-sizing: border-box;
     padding: 90px;
