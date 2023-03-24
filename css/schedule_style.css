@@ -20,34 +20,114 @@
 
 .top_block{
     margin: 30px auto;
+    height: calc(100vh - 100px);
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
-/* ======== schedule ======= */
+/* ======== calender ======= */
 
-.schedule{
+.calender{
+    text-align: center;
     background-color: #CDD9DD;
-    width: 500px;
-    height: 500px;
-    border-radius: 50% 50% 0 0;
-
-    position: relative;
+    width: 27%;
+    height: 100%;
+    border-radius: 50% 50% 0% 0% / 25% 25% 0% 0%;
+    margin: auto;
 }
 
-.schedule h2{
-    padding-bottom: 60px;
-    padding-top: 50px;
+.calender h3{
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+.date{
+    margin: 0 auto;
+    width: 280px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.date li{
+    font-size: 20px;
+    line-height: 2;
+    flex-basis: calc(100% / 7);
+    position: relative;
+    z-index: 1;
+}
+
+.calender p{
+    margin: 20px 0;
+}
+
+
+/* ======== bars ======= */
+
+.bars{
+    margin: 0 20px;
+    width: 20%;
+}
+
+.bars ul{
+    height: calc(100% - 59px);
+    overflow: scroll;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.bars ul::-webkit-scrollbar{
+    display: none;
+}
+
+.bars ul li {
+    cursor: pointer;
+    width: 90%;
+    background-color: hsla(0, 100%, 100%, .3);
+    margin: 5px 10px;
+    border-radius: 10px;
+    flex-basis: 60px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+}
+
+.bars ul li h4{
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.bars ul li img{
+    display: block;
+    width: 30px;
+    margin-right: 30px;
+}
+
+.bars .clicked{
+    flex-basis: 100px;
+    justify-self: self-start;
+    background-color: #fff;
+}
+
+.bars .clicked h4{
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.bars .clicked img{
+    width: 50px;
+    margin-right: 10px;
+}
+
+.bars form{
+    margin: 10px;
+    padding-top: 10px;
+    position: relative;
     text-align: center;
 }
 
-.schedule form{
-    margin-top: 30px;
-    position: relative;
-    text-align: center;
-}
-
-.schedule form::after{
+.bars form::after{
     position: absolute;
     content: '';
     font-size: 12px;
@@ -60,7 +140,7 @@
     border-left: 6px solid transparent;
 }
 
-.schedule select{
+.bars select{
     -moz-appearance: none;
     -webkit-appearance: none;
 
@@ -76,6 +156,77 @@
     box-sizing: border-box;
     color: #3A302A;
 }
+
+/* ======== schedule ======= */
+
+.schedule{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.schedule h2{
+    padding-bottom: 100px;
+    /* padding-top: 50px; */
+    text-align: center;
+}
+
+/* ======== description_block ======= */
+
+.description_block{
+    padding-right: 20px;
+    padding-left: 40px;
+}
+
+.descrp1,.descrp2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descrp_img{
+    width: 70px;
+    height: 70px;
+    /* background-color: #fff; */
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 20px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.descrp_img img{
+    display: block;
+    height: 40px;
+    width: auto;
+}
+
+.descrp_img .shadow{
+    width: 60px;
+    position: absolute;
+    bottom: -20px;
+    z-index: -1;
+}
+
+.descrp_text{
+    padding: 10px;
+}
+
+.descrp_text h4{
+    padding-bottom: 10px;
+}
+
+.descrp_text p{
+    font-size: 12px;
+    width: 220px;
+}
+
 
 /* ======== show_block ======= */
 
@@ -129,14 +280,6 @@
     font-size: 12px;
 }
 
-/* ======== right_block ======= */
-
-.right_block{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
-}
 
 /* ======== upcoming ======= */
 
@@ -156,102 +299,6 @@
     bottom: 50px;
 }
 
-/* ======== description_block ======= */
-
-.description_block{
-    padding-right: 20px;
-    padding-left: 40px;
-}
-
-.descrp1,.descrp2{
-    display: flex;
-    align-items: center;
-}
-
-.descrp_img{
-    width: 70px;
-    height: 70px;
-    /* background-color: #fff; */
-    border-radius: 50%;
-    margin-right: 10px;
-    margin-bottom: 20px;
-
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.descrp_img img{
-    display: block;
-    height: 40px;
-    width: auto;
-}
-
-.descrp_img .shadow{
-    width: 60px;
-    position: absolute;
-    bottom: -20px;
-    z-index: -1;
-}
-
-.descrp_text{
-    padding: 10px;
-}
-
-.descrp_text h4{
-    padding-bottom: 10px;
-}
-
-.descrp_text p{
-    font-size: 12px;
-    width: 220px;
-}
-
-/* ======== calender ======= */
-
-.calender{
-    box-sizing: border-box;
-    padding-left: 20px;
-
-    overflow:initial;
-
-    position: relative;
-}
-
-.calender ul{
-    display: flex;
-}
-
-.calender ul li {
-    cursor: pointer;
-    padding: 15px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.calender ul li h4{
-    margin-bottom: 20px;
-}
-
-.calender ul li img{
-    display: block;
-    width: 25px;
-    margin-bottom: 10px;
-}
-
-.calender .clicked{
-    cursor: pointer;
-
-}
-
-.calender .clicked h4{
-    font-size: 64px;
-}
 
 /* ======== soldout ======= */
 
