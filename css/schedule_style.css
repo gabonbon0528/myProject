@@ -21,6 +21,8 @@
 .top_block{
     margin: 30px auto;
     height: calc(100vh - 100px);
+    box-sizing: border-box;
+    padding: 0 30px;
     display: flex;
     justify-content: center;
 }
@@ -30,9 +32,9 @@
 .calender{
     text-align: center;
     background-color: #CDD9DD;
-    width: 27%;
-    height: 100%;
-    border-radius: 50% 50% 0% 0% / 25% 25% 0% 0%;
+    width: 30%;
+    height: 90%;
+    border-radius: 50% 50% 0% 0% / 30% 30% 0% 0%;
     margin: auto;
 }
 
@@ -50,10 +52,31 @@
 
 .date li{
     font-size: 20px;
-    line-height: 2;
-    flex-basis: calc(100% / 7);
-    position: relative;
+    height: 30px;
+    width: 30px;
+
+    margin: 5px;
     z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.-doomed{
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.-last_month{
+    opacity: .2;
+}
+
+.-on{
+    border-radius: 50%;
+    outline: 1px solid #fff;
+    transform: scale(1.5);
 }
 
 .calender p{
@@ -64,12 +87,13 @@
 /* ======== bars ======= */
 
 .bars{
-    margin: 0 20px;
-    width: 20%;
+    margin: auto 20px;
+    width: 30%;
+    height: 90%;
 }
 
 .bars ul{
-    height: calc(100% - 59px);
+    height: calc(95% - 59px);
     overflow: scroll;
 
     display: flex;
@@ -91,6 +115,8 @@
 
     display: flex;
     align-items: center;
+
+    transition: 0.3s;
 }
 
 .bars ul li h4{
@@ -104,24 +130,33 @@
     margin-right: 30px;
 }
 
-.bars .clicked{
+.bars .-clicked{
     flex-basis: 100px;
     justify-self: self-start;
     background-color: #fff;
 }
 
-.bars .clicked h4{
+.bars .-clicked h4{
     font-size: 40px;
     margin-right: 20px;
 }
 
-.bars .clicked img{
+.bars .-clicked img{
     width: 50px;
-    margin-right: 10px;
+    margin-right: 20px;
+    animation-name: sparkle;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.bars .-hovered{
+    background-color: hsla(0, 100%, 100%, .8);
+    outline: 1px dashed #3A302A;
+    /* background-color: red; */
 }
 
 .bars form{
-    margin: 10px;
+    margin: 30px 10px 20px;
     padding-top: 10px;
     position: relative;
     text-align: center;
@@ -131,8 +166,8 @@
     position: absolute;
     content: '';
     font-size: 12px;
-    right: 190px;
-    top: 11px;
+    right: 125px;
+    top: 20px;
 
     border-top: 10px solid #3A302A;
     border-right: 6px solid transparent;
@@ -163,35 +198,34 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    justify-content: space-around;
 }
 
 .schedule h2{
-    padding-bottom: 100px;
-    /* padding-top: 50px; */
+    padding-bottom: 10px;
     text-align: center;
 }
 
 /* ======== description_block ======= */
 
-.description_block{
-    padding-right: 20px;
-    padding-left: 40px;
+.description_block{}
+
+.descrp1, .descrp2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.descrp1,.descrp2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.descrp1{
+    display: none;
 }
 
 .descrp_img{
-    width: 70px;
-    height: 70px;
-    /* background-color: #fff; */
+    width: 200px;
+    height: 200px;
+    background-color: #CDD9DD;
     border-radius: 50%;
-    margin-right: 10px;
-    margin-bottom: 20px;
 
     position: relative;
 
@@ -203,53 +237,51 @@
 
 .descrp_img img{
     display: block;
-    height: 40px;
+    height: 120px;
     width: auto;
 }
 
 .descrp_img .shadow{
-    width: 60px;
+    width: 80px;
     position: absolute;
-    bottom: -20px;
-    z-index: -1;
+    bottom: 20px;
+    z-index: 0;
 }
 
 .descrp_text{
+    text-align: center;
     padding: 10px;
-}
-
-.descrp_text h4{
-    padding-bottom: 10px;
 }
 
 .descrp_text p{
     font-size: 12px;
-    width: 220px;
+    width: 70%;
+    margin: 0 auto;
 }
 
 
-/* ======== show_block ======= */
+/* ======== detail_block ======= */
 
-.show_block{
+.detail_block{
     position: relative;
 }
 
-.show_card1, .show_card2{
+.macaron_card, .canele_card{
     width: 70%;
     margin: 20px auto;
     border-bottom: 1px solid #3A302A;
     position: relative;
 }
 
-.show_card_text{
+.card_text{
     padding-bottom: 10px;
 }
 
-.show_card_text h5{
+.card_text h5{
     padding-bottom: 5px;
 }
 
-.show_card_btn{
+.card_btn{
     position: absolute;
     top: 10px;
     right: 0;
@@ -259,7 +291,7 @@
     text-align: center;
 }
 
-.show_card_btn a{
+.card_btn a{
     display: block;
     width: 80px;
     margin-bottom: 10px;
@@ -272,14 +304,13 @@
     font-size: 16px;
 }
 
-.show_card_btn p{
+.card_btn p{
     opacity: .5;
 }
 
-.show_card_btn p:last-child{
+.card_btn p:last-child{
     font-size: 12px;
 }
-
 
 /* ======== upcoming ======= */
 

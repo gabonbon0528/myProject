@@ -90,6 +90,10 @@ input[type='submit']{
     cursor: pointer;
 }
 
+.-none{
+    display: none;
+}
+
 /* ======== bg ======= */
 
 .bg_elements{
