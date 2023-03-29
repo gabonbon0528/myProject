@@ -6,16 +6,6 @@
     display: none;
 }
 
-.touching_finger{
-    width: auto;
-    left: 80px;
-    display: none;
-}
-
-.canele{
-    display: none;
-}
-
 /* ======== category_block ======= */
 
 .category_block{
@@ -96,7 +86,6 @@
     padding-bottom: 60px;
 }
 
-
 .right_column ul li a{
     display: block;
     width: 373px;
@@ -162,7 +151,7 @@
 
 .product_card{
     width: 170px;
-    height: 260px;
+    height: 250px;
 
     display: flex;
     flex-direction: column;
@@ -183,14 +172,20 @@
     transform: rotate(15deg) scale(1.5) translate(20px, -20px);
 }
 
-
 .product_card p{
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 10px;
+}
+
+.product_card .price_tag{
+    font-family: 'prata';
+    font-size: 14px;
+    padding-top: 5px;
 }
 
 .product_card input[type='submit']{
     width: 150px;
+    margin: 10px 0;
 }
 
 .product_card input:hover{
