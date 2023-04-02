@@ -193,3 +193,88 @@
     animation-iteration-count: infinite;
 }
 
+@media screen and (max-width: 415px){
+    main.main_block{
+        margin: 20px;
+    }
+
+    .text_block1, .text_block2{
+        height: auto;
+    }
+
+    .text_block1 h2, .text_block2 h2{
+        position: static;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .text_block1 p, .text_block2 p{
+        position: static;
+        width: auto;
+        padding-bottom: 20px;
+    }
+
+    .img1, .img2{
+        width: 100%;
+    }
+
+    .ab_logo{
+        position: static;
+        padding: 50px 0;
+        width: 30%;
+        opacity: .9;
+        background-image: none;
+    }
+
+
+    .text_block3{
+        padding-top: 50px;
+    }
+
+    .text_block3 a{
+        left: 50%;
+        transform: translateX(-50%);
+        top: 630px;
+    }
+
+    .angel1{
+        width: 100%;
+    }
+
+    .brownie1{
+        width: 50px;
+        top: 340px;
+        right: 300px;
+    }
+
+    .madeline1{
+        width: 40px;
+        top: 450px;
+        right: 50px;
+    }
+
+    .canele1{
+        width: 40px;
+        top: 550px;
+        right: 300px;
+    }
+
+    .cookie1{
+        width: 50px;
+        top: 450px;
+        left: 50px;
+    }
+
+    .daquiose1{
+        width: 40px;
+        top: 550px;
+        left: 300px;
+    }
+
+    .sesame1{
+        width: 60px;
+        left: 300px;
+        top: 340px;
+    }
+}

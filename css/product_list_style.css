@@ -108,34 +108,42 @@
 /* ======== sort ======= */
 
 .sort{
-    display: flex;
-    flex-direction: column;
     text-align: center;
+    height: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.sort ul{
+    display: flex;
+
 }
 
 .sort li{
     margin: 20px;
 }
 
-.sort li:first-child a{
-    color: #fff;
-    background-color: #98A498;
-    border: 1px solid #fff;
-}
-
 .sort a{
     display: block;
-    width: 120px;
+    width: 170px;
     line-height: 2;
     text-align: center;
     letter-spacing: 3px;
-    margin: 0 150px;
+    margin: 0 50px;
 
     background-color: #fff;
     color: #3A302A;
     border: 1px solid #3A302A;
-    border-radius: 25px;
+    border-radius: 20px;
 
+    transition: .3s;
+
+}
+
+.sort li .-clicked, .sort li:hover a{
+    color: #fff;
+    background-color: #98A498;
+    border: 1px solid #fff;
 }
 
 /* ======== product_card_block ======= */
@@ -209,4 +217,96 @@
     display: block;
     width: 30px;
     text-align: center;
+}
+
+@media screen and (max-width: 415px){
+    main.container{
+        margin: 20px;
+    }
+
+    .category_block{
+        flex-direction: column;
+        width: auto;
+        padding-top: 20px;
+    }
+
+    .left_column{
+        margin-bottom: 20px;
+    }
+
+    .text p{
+        padding-bottom: 20px;
+    }
+
+    .text h4{
+        line-height: 1.2;
+    }
+
+    .bg_circle{
+        height: 140px;
+        width: 140px;
+    }
+
+    .right_column ul{
+        justify-content: space-evenly;
+    }
+
+    .right_column ul li{
+        padding-bottom: 20px;
+    }
+
+    .right_column ul li a{
+        width: 150px;
+    }
+
+    .right_column ul li h4{
+        font-size: 18px;
+    }
+
+    .product_block{
+        flex-direction: column;
+    }
+
+    .sort h2{
+        padding-bottom: 20px;
+    }
+
+    .sort ul{
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+    }
+
+    .sort li{
+        margin: 5px;
+    }
+
+    .sort a{
+        width: 80px;
+        margin: 0;
+    }
+
+    .product_card_list li{
+        margin: 20px 30px;
+    }
+
+    .product_card{
+        width: 127px;
+        height: 230px;
+    }
+
+    .shadow{
+        width: 70px;
+    }
+
+    .product_card p{
+        font-size: 16px;
+    }
+
+    .pagination{
+        padding-left: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+
 }

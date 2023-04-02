@@ -155,9 +155,14 @@ nav{
     position: relative;
 }
 
+nav .hamb{
+    display: none;
+}
+
 nav ul{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 nav ul li{}
@@ -176,14 +181,14 @@ nav ul li a:hover{
 }
 
 nav .logo{
-    height: 60px;
+    height: 40px;
     background-image: url('../img/all/logo.svg');
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 nav .cart{
-    height: 60px;
+    height: 30px;
     background-image: url('../img/all/cart.svg');
     background-repeat: no-repeat;
     background-position: center center;
@@ -221,10 +226,6 @@ nav .cart{
     display: block;
     width: 50px;
     padding-bottom: 10px;
-}
-
-.nav .hamb{
-    display: none;
 }
 
 /* ======== footer ======= */
@@ -289,5 +290,110 @@ nav .cart{
     }
     100%{
         transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 415px){
+
+    /* ======== nav ======= */
+
+    nav {
+        height: 30px;
+    }
+
+    nav .hamb{
+        display: block;
+        position: fixed;
+        left: 20px;
+        top: 20px;
+        opacity: .8;
+        z-index: 100;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    /* ======== ul shown ======= */
+
+    nav::after .-shown{
+        content: '';
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, .3);
+        z-index: 99;
+    }
+    
+    nav ul .-shown{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        background-color: #ECE9E0;
+        position: fixed;
+        z-index: 100;
+        top: 50px;
+
+        width: 50vw;
+        height: calc(100vh - 30px);
+        padding: 20px;
+    }
+
+    nav ul li .-shown{
+        margin: 10px;
+    }
+
+    nav ul li a .-shown{
+        line-height: 40px;
+        width: 100%;
+    }
+    
+    .top_botton img{
+        width: 40px;
+    }
+
+    /* ======== 模組 ======= */
+
+    .main_block{
+        width: auto;
+    }
+
+    h1 {
+        font-size: 72px;
+        line-height: 1;
+    }
+    
+
+    h2 {
+        font-size: 36px;
+        line-height: 1.5;
+        letter-spacing: 2px;
+    }
+
+    p{
+        font-size: 12px;
+    }
+
+    a{
+        font-size: 12px;
+    }
+
+    /* ======== footer ======= */
+
+    .footer{
+        background-image: url('../img/all/footer_cloud.png');
+        background-position: 0 100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 450px;
+    }
+    
+    .footer ul li{
+        margin: 10px 10px;
+    }
+
+    .footer ul li a{
+        font-size: 12px;
     }
 }
