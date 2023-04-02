@@ -215,3 +215,87 @@ main.main_block > h3{
     align-items: center;
     font-size: 16px;
 }
+
+@media screen and (max-width: 415px){
+    main.main_block{
+        margin: 20px;
+    }
+
+    .top_news{
+        flex-direction: column;
+    }
+
+    .big_news{
+        width: auto;
+        margin-right: 0;
+    }
+
+    .category{
+        width: auto;
+    }
+
+    .important_news, .activity{
+        padding: 0;
+        width: auto;
+        margin: 40px 0;
+        margin-bottom: 100px;
+    }
+
+    .important_news ul, .activity ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .important_news a h4, .activity a h4{
+        margin-top: 20px;
+    }
+
+    .news_card{
+        width: auto;
+        height: auto;
+        padding: 10px;
+        justify-content: start;
+        margin-bottom: 10px
+    }
+
+    .news_card > img{
+        width: 150px;
+        height: auto;
+    }
+
+
+    .text{
+        box-sizing: border-box;
+        padding-left: 10px;
+        width: auto;
+    }
+
+    .text h5{
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+
+    .text > p{
+        /* height: 80px; */
+        width: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+    }
+
+    .share_block{
+        width: 100%;
+    }
+
+    .share_block a{
+        font-size: 12px;
+    }
+
+    .share_block a > img{
+        width: 15px;
+        padding-left: 5px;
+    }
+
+}
