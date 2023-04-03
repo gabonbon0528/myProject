@@ -116,11 +116,11 @@
 
 .sort ul{
     display: flex;
-
+    flex-direction: column;
 }
 
 .sort li{
-    margin: 20px;
+    margin: 10px 20px;
 }
 
 .sort a{

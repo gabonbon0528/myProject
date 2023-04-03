@@ -84,6 +84,10 @@ main.main_block > h3{
     margin-bottom: 20px;
 }
 
+.category2 h4{
+    padding-top: 50px;
+}
+
 .category a{
     display: block;
 }
@@ -128,7 +132,7 @@ main.main_block > h3{
     color: #3A302A;
 }
 
-/* ======== important_news, activity======= */
+/* ======== important_news, activity ======= */
 
 .important_news, .activity{
     padding: 100px 70px;
@@ -139,16 +143,26 @@ main.main_block > h3{
     text-align: center;
 }
 
+.important_news > a, .activity > a{
+    display: block;
+    width: 180px;
+    line-height: 2;
+    margin: 0 auto;
+}
+
 .important_news a h4, .activity a h4{
+    font-size: 18px;
     text-align: center;
     font-weight: bold;
     margin-top: 30px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #3A302A;
 
-    transition: .1s;
+    transition: .2s;
 }
 
 .important_news a:hover h4, .activity a:hover h4{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 

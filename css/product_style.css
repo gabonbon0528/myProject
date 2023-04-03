@@ -83,12 +83,12 @@ nav .-shown li a{
 .outer_grid{
     background-image: url('../img/product/img1.jpg');
     background-position: 0px;
-    background-size: 56vw 120vh;
+    background-size: 56vw 110vh;
     background-repeat: no-repeat;
 }
 
 .inner_grid{
-    height: 120vh;
+    height: 110vh;
 
     display: grid;
     grid-template-columns: repeat(12,88px);
@@ -126,7 +126,7 @@ nav .-shown li a{
     font-family: 'noto sans';
     font-size: 24px;
     letter-spacing: 3px;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 }
 
 .text p{
@@ -143,8 +143,16 @@ nav .-shown li a{
     display: flex;
     align-items: center;
     font-size: 14px;
-    padding-right: 10px;
+    padding: 5px 8px;
+    border: 1px solid #3A302A;
+    border-radius: 5px;
+    margin: 5px;
 }
+
+.policy a:hover{
+    transform: scale(1.1);
+}
+
 
 .order select{
     -moz-appearance: none;
@@ -291,4 +299,53 @@ nav .-shown li a{
     padding-top: 10px;
 }
 
+@media screen and (max-width: 415px){
+    nav{
+        height: auto;
+    }
+
+    .outer_grid{
+        background-image: none;
+    }
+
+    .inner_grid{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-areas: "text";
+        column-gap: 10px;
+        height: auto;
+    }
+
+    .text_block{
+        padding: 30px;
+    }
+
+    .subtitle{
+        padding-top: 80px;
+
+    }
+
+    .price{
+        padding-bottom: 30px;
+    }
+
+    .order input{
+        margin: 20px 0;
+    }
+
+    .detail h2{
+        padding: 60px 0;
+    }
+
+    .description li{
+        position: static;
+        padding: 0 40px;
+    }
+
+    .additional ul{
+        margin: 20px;
+        width: auto;
+        overflow: scroll;
+        justify-content: start;
+    }
+}
 
