@@ -182,6 +182,7 @@ nav ul li a:hover{
 
 nav .logo{
     height: 40px;
+    width: 40px;
     background-image: url('../img/all/logo.svg');
     background-repeat: no-repeat;
     background-position: center center;
@@ -314,18 +315,22 @@ nav .cart{
         display: none;
     }
 
-    /* ======== ul shown ======= */
-
-    nav::after .-shown{
-        content: '';
+    .overlay{
+        display: none;
         position: fixed;
         height: 100vh;
         width: 100vw;
         background-color: rgba(0, 0, 0, .3);
-        z-index: 99;
+        z-index: 98;
+    }
+
+    /* ======== ul shown ======= */
+
+    .overlay.shown{
+        display: block;
     }
     
-    nav ul .-shown{
+    nav .-shown{
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -340,13 +345,21 @@ nav .cart{
         padding: 20px;
     }
 
-    nav ul li .-shown{
+    nav .-shown li{
         margin: 10px;
     }
 
-    nav ul li a .-shown{
+    nav .-shown li:first-child a{
         line-height: 40px;
-        width: 100%;
+        width: 40px;
+    }
+
+    .nav .dropdown{
+        display: none;
+    }
+    
+    .nav > ul > li:nth-child(2):hover .dropdown{
+        display: none;
     }
     
     .top_botton img{
