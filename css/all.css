@@ -309,6 +309,8 @@ nav .cart{
         top: 20px;
         opacity: .8;
         z-index: 100;
+
+        text-shadow: 0px 0px 1px #fff;
     }
 
     nav ul{

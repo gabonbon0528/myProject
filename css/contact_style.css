@@ -47,23 +47,32 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, te
     outline: none;
     /* background-color: #CDD9DD; */
     color: #3A302A;
-
 }
 
-.contact_block form label, .contact_block form input, .contact_block form textarea, .time_ratio input, .time_ratio label, .time_ratio{
+.contact_block form label, .contact_block form input, .contact_block form textarea, .time_checkbox input, .time_checkbox label, .time_checkbox{
     margin-bottom: 20px;
 }
 
-input[type='submit']{
-    border: none;
-    margin: 20px 0;
+input[type='submit'], input[type='reset']{
+    font-family: serif;
 
-    background-color: #98A498;
-    color: #fff;
+    margin: 10px 0;
     line-height: 3;
     border-radius: 5px;
 
     cursor: pointer;
+}
+
+input[type='submit']{
+    border: none;
+    background-color: #98A498;
+    color: #fff;
+}
+
+input[type='reset']{
+    border: 1px solid #3A302A;
+    background-color: #fff;
+    color: #3A302A;
 }
 
 @media screen and (max-width: 415px){

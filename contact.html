@@ -57,15 +57,15 @@
             <h3>Contact</h3>
 
                 <section class="contact_block">
-                    <form action="" method="post">
+                    <form action="#" method="post" name="form">
                         <label for="name">姓名</label>
-                        <input type="text" id="name">
+                        <input type="text" id="name" required>
                         <label for="email">電子信箱</label>
-                        <input type="email" id="email">
+                        <input type="email" id="email" required>
                         <label for="tel">聯絡電話</label>
-                        <input type="tel" id="tel">
+                        <input type="tel" id="tel" required>
                         <label for="time">方便聯絡時間</label>
-                        <section class="time_ratio">
+                        <section class="time_checkbox">
                             <input type="checkbox" id="time1">
                             <label for="time1">平日早上</label>
                             <input type="checkbox" id="time2">
@@ -92,10 +92,11 @@
                             <input type="radio" id="other" name="theme">
                             <label for="other">其他</label>    
                         </section>                   
-                        <label for="textarea" >描述</label>
-                        <textarea name="" id="textarea" cols="30" rows="10" placeholder="請輸入文字"></textarea>
+                        <label for="textarea">描述</label>
+                        <textarea name="" id="textarea" cols="30" rows="10" placeholder="請輸入文字" required></textarea>
 
                         <input type="submit">
+                        <input type="reset">
                     </form>
                 </section>
         
@@ -113,6 +114,10 @@
         </footer>
 
     </div> <!-- wrapper 結束 -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./js/is.min.js"></script>
+    <script src="./js/contact.js"></script>
 
 </body>
 </html>
