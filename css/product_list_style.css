@@ -272,6 +272,7 @@
     }
 
     .sort ul{
+        flex-direction: row;
         flex-wrap: wrap;
         padding-bottom: 20px;
     }

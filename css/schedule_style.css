@@ -190,17 +190,19 @@
     width: 35%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: start;
 }
 
 .schedule h2{
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     text-align: center;
 }
 
 /* ======== description_block ======= */
 
-.description_block{}
+.description_block{
+    padding: 50px 0;
+}
 
 .descrp1, .descrp2{
     display: flex;
@@ -209,13 +211,13 @@
     justify-content: space-around;
 }
 
-.descrp1{
+.descrp1.-none, .descrp2.-none{
     display: none;
 }
 
 .descrp_img{
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     background-color: #CDD9DD;
     border-radius: 50%;
 
@@ -229,8 +231,9 @@
 
 .descrp_img img{
     display: block;
-    height: 120px;
+    height: 100px;
     width: auto;
+    z-index: 1;
 }
 
 .descrp_img .shadow{
@@ -257,11 +260,15 @@
     position: relative;
 }
 
-.macaron_card, .canele_card{
+.macaron_card, .canele_card, .cake_card{
     width: 100%;
     margin-bottom: 20px;
     border-bottom: 1px solid #3A302A;
     position: relative;
+}
+
+.macaron_card.-none, .canele_card.-none, .cake_card.-none{
+    display: none;
 }
 
 .card_text{
