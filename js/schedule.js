@@ -9,8 +9,6 @@ scroll_block_el.addEventListener('scroll', function(){
     });
 
     let left_days = this.closest('.top_block').querySelectorAll('.date > li');
-    // console.log(left_days);
-
     left_days.forEach(function(item, i){
         item.classList.remove('-on');
     });
@@ -102,4 +100,30 @@ blocks.forEach(function(item, i){
             descrp_blocks[1].classList.remove('-none');
         }
     });
+});
+
+let filter = document.getElementById('filter');
+// console.log(filter);
+filter.addEventListener('change', function(){
+    let filter_value = filter.value;
+    //console.log(filter_value);
+    let blocks = this.closest('.bars').querySelectorAll('#scroll_block > li');
+    for(let i = 0; i < blocks.length; i++){
+        blocks[i].classList.add('-none');
+        if(filter_value !== 'all'){
+            if(blocks[i].getAttribute('data-type')){
+                let blocks_type = blocks[i].getAttribute('data-type').split(' ');
+                //console.log(blocks_type);
+                for(let j = 0; j < blocks_type.length; j++){
+                    if(filter_value == blocks_type[j]){
+                        blocks[i].classList.remove('-none');
+                    }
+                }
+            }else{
+                blocks[i].classList.add('-none');
+            }    
+        }else{
+            blocks[i].classList.remove('-none');
+        }
+    }
 });

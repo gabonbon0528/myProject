@@ -95,7 +95,7 @@
     display: none;
 }
 
-.bars ul li {
+.bars ul li{
     cursor: pointer;
     width: 90%;
     background-color: hsla(0, 100%, 100%, .3);
@@ -109,6 +109,11 @@
 
     transition: 0.3s;
 }
+
+.bars ul li.-none{
+    display: none;
+}
+
 
 .bars ul li h4{
     margin: 0 20px;
@@ -158,7 +163,7 @@
     position: absolute;
     content: '';
     font-size: 12px;
-    right: 125px;
+    right: 135px;
     top: 20px;
 
     border-top: 10px solid #3A302A;
