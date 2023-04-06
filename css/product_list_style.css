@@ -157,6 +157,10 @@
     margin: 30px;
 }
 
+.product_card_list li.-none{
+    display: none;
+}
+
 .product_card{
     width: 170px;
     height: 250px;

@@ -4,6 +4,7 @@ window.addEventListener('load', function(){
 });
 
 let top_btn = document.getElementById('top_botton');
-top_btn.addEventListener('click', function(){
-    window.scrollY = 0;
+top_btn.addEventListener('click', function(e){
+    e.preventDefault();
+    window.scrollTo(0, 0);
 });
