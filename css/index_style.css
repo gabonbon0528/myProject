@@ -12,6 +12,8 @@
     position: absolute;
     top: 178px;
     left: 88px;
+
+    opacity: 0;
 }
 
 .kv .title a{   
@@ -31,63 +33,80 @@
     transform: scale(1.1);
 }
 
+.heaven{
+    perspective: 1500px;
+    perspective-origin: 100% 0%;
+}
+
 .kv .arch{
     position: absolute;
     top: 110px;
     right: 210px;
+
 }
 
-.kv .stair{
+.stair{
     position: absolute;
     top: 410px;
     right: 10px;
+
+    opacity: 0;
 }
 
 .canele1{
     position: absolute;
-    transform: scale(.08);
-    top: 285px;
-    right: 220px;
+    transform: scale(.1);
+    top: 139px;
+    right: 132px;
+    opacity: 0;
 
+    /* animation-name: rolling; */
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
 .daquoise1{
     position: absolute;
     transform: scale(.1);
-    top: 397px;
-    right: 171px;
+    top: 184px;
+    right: 132px;
+    opacity: 0;
 
 }
 
 .macaron1{
     position: absolute;
-    transform: scale(.12) rotate(110deg);
-    top: 450px;
-    right: 80px;
+    transform: scale(.1) rotate(110deg);
+    top: 139px;
+    right: 132px;
+    opacity: 0;
 
 }
 
 .canele2{
     position: absolute;
-    transform: scale(.13);
-    top: 612px;
-    right: -86px;
+    transform: scale(.1);
+    top: 139px;
+    right: 132px;
+    opacity: 0;
 
 }
 
 .daquoise2{
     position: absolute;
-    transform: scale(.15);
-    top: 833px;
-    right: -76px;
+    transform: scale(.1);
+    top: 184px;
+    right: 132px;
+    opacity: 0;
 
 }
 
 .macaron2{
     position: absolute;
-    transform: scale(.16) rotate(135deg);
-    top: 906px;
-    right: 83px;
+    transform: scale(.1) rotate(135deg);
+    top: 139px;
+    right: 132px;
+    opacity: 0;
 
 }
 
@@ -97,6 +116,8 @@
     top: 800px;
     right: 206px;
 
+    opacity: 0;
+
 }
 
 .star2{
@@ -105,7 +126,22 @@
     top: 1366px;
     right: 721px;
 
+    opacity: 0;
 }
+
+#flash{
+    /* display: none; */
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+
+    transition: .5s;
+}
+
 
 /* ======== main ======= */
 
@@ -140,19 +176,20 @@
 .product1{
     grid-area: product1; 
     position: relative;
+    opacity: 0;
 
 }
 
 .product2{
     grid-area: product2; 
     position: relative;
-
+    opacity: 0;
 }
 
 .product3{
     grid-area: product3; 
     position: relative;
-
+    opacity: 0;
 }
 
 .product1 img, .product2 img, .product3 img{
@@ -209,6 +246,8 @@
     background-position: 0 -35px;
     background-repeat: no-repeat;
     position: relative;
+
+    opacity: 0;
 }
 
 .news img{
@@ -266,6 +305,8 @@
     position: relative;
     background-image: url('../img/index/calender_bg_arch.png');
     background-size: cover;
+
+    opacity: 0;
 }
 
 .calender .angel2{

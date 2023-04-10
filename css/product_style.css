@@ -29,7 +29,7 @@ nav ul{
     position: fixed;
     z-index: 100;
     top: 50px;
-    left: -25vw;
+    left: -30vw;
 
     background-color: #ECE9E0;
     width: 20vw;
@@ -37,6 +37,11 @@ nav ul{
     padding: 20px;
 
     transition: .5s;
+}
+
+.cart_num{
+    right: 140px;
+    bottom: 225px;
 }
 
 .overlay{
@@ -63,11 +68,6 @@ nav .-shown li{
     margin: 10px;
 }
 
-nav .-shown li a{
-    line-height: 40px;
-    width: 100%;
-}
-
 .nav .dropdown{
     display: none;
 }
@@ -76,13 +76,6 @@ nav .-shown li a{
     display: none;
 }
 
-.nav ul li:first-child{
-    display: block;
-    width: 50px;
-}
-
-.nav .logo{}
-
 /* ======== outer grid ======= */
 
 .outer_grid{
@@ -90,6 +83,7 @@ nav .-shown li a{
     background-position: 0px;
     background-size: 56vw 110vh;
     background-repeat: no-repeat;
+    background-attachment: fixed
 }
 
 .inner_grid{
@@ -158,6 +152,77 @@ nav .-shown li a{
     transform: scale(1.1);
 }
 
+.lightbox-overlay{
+    display: none;
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-overlay.-shown{
+    display: block;
+}
+
+.lightbox{
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+
+    border-radius: 5px;
+}
+
+.lightbox h5{
+    text-align: center;
+    padding-top: 40px;
+}
+
+.lightbox p{
+    padding: 30px;
+}
+
+.lightbox-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.lightbox-close::before, .lightbox-close::after{
+    position: absolute;
+    content: '';
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    background-color: #3A302A;
+    width: 20px;
+    height: 2px;
+}
+
+.lightbox-close::after{
+    top: 15px;
+    right: 15px;
+    transform: rotate(45deg);
+}
+
+.lightbox-close::before{
+    top: 15px;
+    right: 15px;
+
+    transform: rotate(-45deg);
+}
 
 .order select{
     -moz-appearance: none;
@@ -175,6 +240,8 @@ nav .-shown li a{
     box-sizing: border-box;
     padding: 0 60px ;
     color: #3A302A;
+
+    cursor: pointer;
 }
 
 .order input{
@@ -201,6 +268,7 @@ nav .-shown li a{
     background-image: url('../img/product/img_banner.jpg');
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed
 }
 
 /* ======== detail ======= */
@@ -232,14 +300,58 @@ nav .-shown li a{
     width: 300px;
 }
 
-.detail img{
+.slide_container{
+    position: relative;
+
     display: block;
     width: 330px;
-    height: auto;
+    height: 350px;
     border-radius: 25px;
+    overflow: hidden;
 
     margin: 0 auto;
     margin-bottom: 150px;
+
+}
+
+.slide{
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    text-align: center;
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+#prev, #next {
+    position: absolute;
+    bottom: -20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 16px;
+    color: white;
+    font-size: 24px;
+    user-select: none;
+}
+
+#prev:hover, #next:hover{
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
 }
 
 .block1{
@@ -283,14 +395,15 @@ nav .-shown li a{
 .additional a{
     display: block;
     width: 120px;
+}
 
+.additional .img_block{
     transition: .3s;
 }
 
-.additional a:hover{
-    transform: scale(1.2) rotate(25deg);
+.additional .img_block:hover{
+    transform: scale(1.2) rotate(25deg) translate(10px, -15px);
 }
-
 
 .additional img{
     display: block;
@@ -307,6 +420,11 @@ nav .-shown li a{
 @media screen and (max-width: 415px){
     nav{
         height: auto;
+    }
+
+    nav ul{
+        left: -300px;
+        width: 40vw;
     }
 
     .outer_grid{

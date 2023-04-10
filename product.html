@@ -50,7 +50,7 @@
                         <li><a href="./schedule.html">Schedule</a></li>
                         <li><a href="./news.html">News</a></li>
                         <li><a href="./contact.html">Contact</a></li>
-                        <li><a href="#" class="cart"></a></li>
+                        <li><a href="#" class="cart"><div class="cart_num">0</div></a></li>
                     </ul>
                     <a href="#" class="top_botton" id="top_botton"><img src="./img/product_list/madeline.png">TOP</a>
                     <div class="overlay"></div>
@@ -63,7 +63,7 @@
             <div class="main_block inner_grid"> <!-- inner_grid 開始 -->
                 <section class="text_block">
                     <div class="text">
-                        <h5 class="subtitle">商品列表</h5>
+                        <h5 class="subtitle">生日糕/草莓限定/人氣商品</h5>
                         <h3 class="title">生日糕</h3>
                         <h5 class="price" >$980</h5>
                         <p>月光馬卡萬年經典，冬季限定草莓蛋糕。<br>
@@ -73,28 +73,36 @@
                             <a href="#"><span class="material-symbols-outlined">search</span>保存方式</a>
                             <a href="#"><span class="material-symbols-outlined">search</span>賞味期限</a>
                             <a href="#"><span class="material-symbols-outlined">search</span>運送方式</a>
+                            <section class="lightbox-overlay">
+                                <div class="lightbox">
+                                    <h5>保存方式</h5>
+                                    <p>123</p>
+                                    <div class="lightbox-close"></div>
+                                </div>
+                            </section>
                         </div>
                     </div>
                     <form class="order" action="">
                         <select class="time" name="time" id="">
                             <option value="">選擇日期</option>
-                            <option value="">6/19</option>
-                            <option value="">6/20</option>
-                            <option value="">6/21</option>
+                            <option value="3/9" disabled>3/9</option>
+                            <option value="3/11" disabled>3/11</option>
+                            <option value="3/13">3/13</option>
+                            <option value="3/14" disabled>3/14</option>
                         </select>
                         <select class="size" name="size" id="">
                             <option value="">選擇尺寸</option>
-                            <option value="">4</option>
-                            <option value="">6</option>
-                            <option value="">8</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
                         </select>
                         <select class="count" name="count" id="">
                             <option value="">選擇口味</option>
-                            <option value="">原味</option>
-                            <option value="">伯爵</option>
-                            <option value="">巧克力</option>
+                            <option value="vanilla">原味</option>
+                            <option value="earl">伯爵</option>
+                            <option value="choco">巧克力</option>
                         </select>
-                        <input type="submit" value="加入購物車">
+                        <input type="submit" value="加入購物車" id="submit">
                     </form>
                 </section>
             </div> <!-- inner_grid 結束 -->
@@ -122,7 +130,22 @@
                     <p>內餡無法指定，全看當天市場和季節有什麼水果。有時候會夾烤布丁或慕斯。</p>
                 </li>               
             </ul>
-            <img src="./img/product/carousel.jpg" alt="">
+            <div class="slide_container">
+                <div class="slide">
+                    <img src="./img/product/carousel.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/product/img1.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/product/carousel.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/product/img1.jpg" alt="">
+                </div>
+                <h4 id="prev">prev</h4>
+                <h4 id="next">next</h4>
+            </div>
 
         </section>
 
@@ -131,37 +154,52 @@
             <ul>
                 <li>
                     <a href="#">
-                        <img src="./img/product_list/brownie.png" alt="">
-                        <div class="shadow"></div>
+                        <div class="img_block">
+                            <img src="./img/product_list/brownie.png" alt="">
+                            <div class="shadow"></div>    
+                        </div>
                         <p>布朗尼</p>
+                        <p class="price_tag">$60</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="./img/product_list/macaron.png" alt="">
-                        <div class="shadow"></div>
+                        <div class="img_block">
+                            <img src="./img/product_list/macaron.png" alt="">
+                            <div class="shadow"></div>
+                        </div>
                         <p>芭樂馬卡</p>
+                        <p class="price_tag">$60</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="./img/product_list/cookie1.png" alt="">
-                        <div class="shadow"></div>
+                        <div class="img_block">
+                            <img src="./img/product_list/cookie1.png" alt="">
+                            <div class="shadow"></div>    
+                        </div>
                         <p>杏仁餅乾</p>
+                        <p class="price_tag">$50</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="./img/product_list/canele.png" alt="">
-                        <div class="shadow"></div>
+                        <div class="img_block">
+                            <img src="./img/product_list/canele.png" alt="">
+                            <div class="shadow"></div>    
+                        </div>
                         <p>可麗露</p>
+                        <p class="price_tag">$60</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="./img/product_list/cookie2.png" alt="">
-                        <div class="shadow"></div>
+                        <div class="img_block">
+                            <img src="./img/product_list/cookie2.png" alt="">
+                            <div class="shadow"></div>    
+                        </div>
                         <p>伯爵餅乾</p>
+                        <p class="price_tag">$50</p>
                     </a>
                 </li>
 
@@ -184,7 +222,7 @@
 
     <script src="https://kit.fontawesome.com/08cc24850f.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="./js/product.js"></script>
+    <script src="js/product.js"></script>
     <script src="./js/all.js"></script>
 
 </body>

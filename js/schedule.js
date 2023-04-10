@@ -1,3 +1,13 @@
+// 預設顯示今天日期
+document.addEventListener("DOMContentLoaded", function(){
+    let day = new Date().getDate();
+    for(let i = 0; i < blocks.length; i++){
+        if(blocks[i].querySelector('h4').textContent == day){
+            blocks[i].classList.add('-clicked');
+        }
+    }
+});
+
 let scroll_block_el = document.getElementById('scroll_block');
 let blocks = document.querySelectorAll('#scroll_block > li')
 
@@ -40,7 +50,6 @@ scroll_block_el.addEventListener('mousemove', function(e){
     });
 
     let left_days = this.closest('.top_block').querySelectorAll('.date > li');
-
     left_days.forEach(function(item, i){
         item.classList.remove('-on');
     });
@@ -48,14 +57,20 @@ scroll_block_el.addEventListener('mousemove', function(e){
     let days;
     for(let i = 0; i < blocks.length; i++){
         
-        if(e.target == blocks[i]){
+        if(e.target.tagName == 'LI'){
             let days_num = e.target.querySelector('h4').innerHTML;
             // console.log(days_num);
             days = document.querySelectorAll('.date > li')[parseInt(days_num) + 9];
-            // blocks[i].classList.add('-hovered');
+            //blocks[i].classList.add('-hovered');
             e.target.classList.add('-hovered');
             days.classList.add('-on');
-        };
+        }else if(e.target.tagName == 'IMG'){
+            let days_num = e.target.closest('li').querySelector('h4').innerHTML;
+            days = document.querySelectorAll('.date > li')[parseInt(days_num) + 9];
+            e.target.closest('li').classList.add('-hovered');
+            days.classList.add('-on');
+
+        }; 
     }
 });
 
@@ -101,7 +116,7 @@ blocks.forEach(function(item, i){
         }
     });
 });
-
+/*
 let filter = document.getElementById('filter');
 // console.log(filter);
 filter.addEventListener('change', function(){
@@ -127,3 +142,33 @@ filter.addEventListener('change', function(){
         }
     }
 });
+*/
+
+const filter = document.getElementById('filter');
+filter.addEventListener('change', function() {
+    let filterValue = filter.value;
+    let blocks = this.closest('.bars').querySelectorAll('#scroll_block > li');
+    for (let i = 0; i < blocks.length; i++) {
+        let block = blocks[i];
+        block.classList.add('-none');
+        let blockType = block.getAttribute('data-type');
+        if (filterValue === 'all' || (blockType && blockType.includes(filterValue))) {
+            block.classList.remove('-none');
+        }
+    }
+});
+
+/* ========== 加入購物車 ========== */
+
+let add_btns = document.querySelectorAll('.soldout button');
+console.log(add_btns);
+for(let i = 0; i < add_btns.length; i++){
+    let add_btn = add_btns[i];
+    add_btn.addEventListener('click', function(e){
+        e.preventDefault();
+        localStorage.cart_num++;
+        showCartNum();
+    });
+    
+}
+
