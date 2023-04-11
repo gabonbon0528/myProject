@@ -59,10 +59,6 @@
     top: 139px;
     right: 132px;
     opacity: 0;
-
-    /* animation-name: rolling; */
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
 }
 
 .daquoise1{
@@ -107,7 +103,14 @@
     top: 139px;
     right: 132px;
     opacity: 0;
+}
 
+.ebi{
+    position: absolute;
+    transform: scale(.1) rotate(135deg);
+    top: 190px;
+    right: 301px;
+    opacity: 0;
 }
 
 .angelm{

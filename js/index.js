@@ -132,6 +132,10 @@ window.addEventListener('load', function(){
             callback: function(){
                 flash.style.display = 'none';
                 if(windowWidth >= 1024){
+                    // for(let i = 2; i < heaven_obj.length - 2; i++){
+                    //     heaven_obj[i].style.opacity = 1;
+                    // }
+
                     // rolling(heaven_obj[i]);
 
                     // setTimeout(function(){
