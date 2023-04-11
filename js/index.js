@@ -27,7 +27,7 @@ window.addEventListener('load', function(){
             timing: function(timeFraction){
                 return timeFraction;
             },
-            draw: function(progress) {
+            draw: function(progress){
                 let translateZ = - (1 - progress) * 3000;
                 let translateY;
                 if(progress < 0.2){

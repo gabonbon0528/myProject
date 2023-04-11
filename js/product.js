@@ -21,7 +21,7 @@ submit_btn.addEventListener('click', function(e){
     if(!count.value){
         e.preventDefault();
         is_valid = false;
-        alert('請選擇數量')
+        alert('請選擇口味')
     }
     
     localStorage.cart_num++;
