@@ -142,7 +142,7 @@ window.addEventListener('load', function(){
                     //     rolling(heaven_obj[i]);
                     // });
 
-                    for(let i = 2; i < heaven_obj.length - 2; i++){
+                    for(let i = 2; i < heaven_obj.length - 2 - 18; i++){
                         setTimeout(function(){
                             rolling(heaven_obj[i]);
                         }, i * 800);
