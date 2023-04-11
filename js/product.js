@@ -1,4 +1,5 @@
 /* ========== 加入購物車 ========== */
+
 let submit_btn = document.getElementById('submit');
 let time = document.querySelector('.time');
 let size = document.querySelector('.size');

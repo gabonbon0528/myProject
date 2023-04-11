@@ -155,21 +155,9 @@
 .bars form{
     margin: 30px 10px 20px;
     padding-top: 10px;
-    position: relative;
     text-align: center;
-}
 
-.bars form::after{
-    position: absolute;
-    content: '';
-    font-size: 12px;
-    right: 135px;
-    top: 20px;
-
-    border-top: 10px solid #3A302A;
-    border-right: 6px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-left: 6px solid transparent;
+    position: relative;
 }
 
 .bars select{
@@ -187,6 +175,19 @@
     text-align: center;
     box-sizing: border-box;
     color: #3A302A;
+}
+
+.bars form::after{
+    position: absolute;
+    content: '';
+    font-size: 12px;
+    right: 135px;
+    top: 20px;
+
+    border-top: 10px solid #3A302A;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 6px solid transparent;
 }
 
 /* ======== schedule ======= */
@@ -424,8 +425,8 @@
     }
 
     .date{
-        width: auto;
-        margin: 0 41px;
+        width: 253px;
+        margin: 0 auto;
     }
 
     .date li{

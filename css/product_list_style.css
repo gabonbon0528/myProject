@@ -259,6 +259,10 @@
         padding-bottom: 20px;
     }
 
+    .right_column ul li a img{
+        margin-bottom: 20px;
+    }
+
     .right_column ul li a{
         width: 150px;
     }
@@ -280,6 +284,8 @@
     }
 
     .sort ul{
+        width: 276px;
+        margin: 0 auto;
         flex-direction: row;
         flex-wrap: wrap;
         padding-bottom: 20px;
@@ -295,11 +301,13 @@
     }
 
     .product_card_list{
-        width: auto;
+        width: 334px;
+        margin: 0 auto;
+        justify-content: start;
     }
 
     .product_card_list li{
-        margin: 20px 30px;
+        margin: 20px 20px;
     }
 
     .product_card{

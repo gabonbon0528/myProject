@@ -3,7 +3,32 @@ document.addEventListener("DOMContentLoaded", function(){
     let day = new Date().getDate();
     for(let i = 0; i < blocks.length; i++){
         if(blocks[i].querySelector('h4').textContent == day){
-            blocks[i].classList.add('-clicked');
+            let the_block = blocks[i]
+            the_block.classList.add('-clicked');
+
+            let descrp_blocks = this.querySelector('.description_block').children; 
+            let the_type = the_block.getAttribute('data-type');
+            let detail_blocks = this.querySelector('.detail_block').children;
+
+            if(the_type.includes('macaron') && the_type.includes('macaron')){
+                descrp_blocks[0].classList.add('-none');
+                descrp_blocks[1].classList.remove('-none');
+                detail_blocks[0].classList.remove('-none');
+                detail_blocks[1].classList.remove('-none');
+            }else if(the_type.includes('macaron')){
+                descrp_blocks[0].classList.add('-none');
+                descrp_blocks[1].classList.remove('-none');
+                detail_blocks[0].classList.remove('-none');
+            }else if(the_type.includes('canele')){
+                descrp_blocks[0].classList.remove('-none');
+                descrp_blocks[1].classList.add('-none');
+                detail_blocks[1].classList.remove('-none');
+            }else if(the_type.includes('cake')){
+                descrp_blocks[0].classList.remove('-none');
+                descrp_blocks[1].classList.add('-none');
+                detail_blocks[2].classList.remove('-none');
+            }
+            
         }
     }
 });
@@ -144,7 +169,7 @@ filter.addEventListener('change', function(){
 });
 */
 
-const filter = document.getElementById('filter');
+let filter = document.getElementById('filter');
 filter.addEventListener('change', function() {
     let filterValue = filter.value;
     let blocks = this.closest('.bars').querySelectorAll('#scroll_block > li');

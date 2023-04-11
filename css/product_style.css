@@ -444,11 +444,14 @@ nav .-shown li{
 
     .subtitle{
         padding-top: 80px;
-
     }
 
     .price{
         padding-bottom: 30px;
+    }
+
+    .policy .material-symbols-outlined{
+        font-size: 20px;
     }
 
     .order input{

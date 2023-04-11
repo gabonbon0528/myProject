@@ -42,7 +42,7 @@
     position: absolute;
     top: 110px;
     right: 210px;
-
+    transform: translateY(1100px) translateZ(-3000px);
 }
 
 .stair{
@@ -122,11 +122,16 @@
 
 .star2{
     position: absolute;
-    transform: scale(.7);
+    width: 150px;
     top: 1366px;
-    right: 721px;
+    right: 814px;
 
     opacity: 0;
+
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 #flash{
@@ -198,6 +203,10 @@
     left: 50%;
     transform: translateX(-50%);
     top: -80px;
+}
+
+.product1 h5, .product2 h5, .product3 h5{
+    display: none;
 }
 
 .product1::after, .product2::after, .product3::after{
@@ -353,7 +362,6 @@
     padding: 40px 15% 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
 }
 
 .date li{
@@ -442,55 +450,54 @@
     .kv .stair{
         width: 100%;
         right: 0;
-        top: 450px;
+        top: 234px;
     }
 
     .canele1{
         right: 65px;
-        top: 235px;
+        top: 14px;
         transform: scale(.08)
 
     }
 
     .daquoise1{
-        top: 380px;
+        top: 159px;
         right: 4px;
     }
 
     .macaron1{
-        top: 438px;
+        top: 217px;
         right: -110px;
         transform: scale(.1) rotate(110deg);
     }
 
     .canele2{
-        top: 590px;
+        top: 369px;
         right: -196px;
         transform: scale(.11)
     }
 
     .daquoise2{
         transform: scale(.12);
-        top: 720px;
+        top: 499px;
         right: -34px;
     }
 
     .macaron2{
         transform: scale(.13) rotate(135deg);
-        top: 802px;
+        top: 581px;
         right: 98px;
     }
 
     .angelm{
         transform: scale(-0.2, 0.2);
-        top: 636px;
+        top: 446px;
         right: -317px;
     }
 
     .star2{
-        top: 1228px;
-        right: 140px;
-        transform: scale(.5);
+        top: 1036px;
+        right: 223px;
     }
 
     .container{
@@ -522,9 +529,17 @@
 
     /* ======== product ======= */
 
-    .product1 img, .product2 img, .product3 img {
-        width: 100%;
-        top: -50px;
+    .product1 img, .product2 img, .product3 img{
+        display: none;
+    }
+
+    .product1 h5, .product2 h5, .product3 h5{
+        display: block;
+        padding-top: 20px;
+        text-align: center;
+        font-weight: normal;
+        font-size: 18px;
+        letter-spacing: 1px;
     }
 
     .product1::after, .product2::after, .product3::after{
@@ -554,7 +569,7 @@
     }
 
     .news_content{
-        margin: 30px;
+        margin: 30px 10px;
     }
 
     .news_content h1{
@@ -570,14 +585,14 @@
 
     .news_content .refer{
         font-size: 18px;
-        padding-top: 15px
+        padding-top: 10px;
     }
 
     /* ======== calender ======= */
 
     .calender{
         width: 90%;
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         box-sizing: border-box;
         margin: 0 20px;
@@ -594,8 +609,12 @@
         width: 120%;
     }
 
+    .calender h3{
+        padding: 80px 0 20px; 
+    }
+
     .calender .description{
-        padding-bottom: 20px;
+        padding: 20px 0;
     }
 
     .calender .touching_finger{
@@ -611,12 +630,17 @@
     }
 
     .date{
-        padding: 25px 15% 25px;
+        width: 238px;
+        padding: 0;
+        margin: 0 auto;
+        font-size: 16px;
+        margin: 0 auto;
     }
 
     .date li{
-        height: 27px;
-        width: 27px;
+        height: 30px;
+        width: 30px;
         font-size: 18px;
+        margin: 2px;
     }
 }

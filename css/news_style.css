@@ -283,7 +283,7 @@ main.main_block > h3{
 
     .text h5{
         font-size: 14px;
-        padding-bottom: 10px;
+        padding-bottom: 8px;
     }
 
     .text > p{
@@ -298,6 +298,7 @@ main.main_block > h3{
 
     .share_block{
         width: 100%;
+        justify-content: space-between;
     }
 
     .share_block a{

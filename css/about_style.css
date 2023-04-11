@@ -215,7 +215,7 @@
     .text_block1 p, .text_block2 p{
         position: static;
         width: auto;
-        padding-bottom: 20px;
+        padding-bottom: 50px;
     }
 
     .img1, .img2{
@@ -236,6 +236,7 @@
     }
 
     .text_block3 a{
+        font-size: 16px;
         left: 50%;
         transform: translateX(-50%);
         top: 630px;

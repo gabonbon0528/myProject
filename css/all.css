@@ -144,9 +144,11 @@ input[type='submit']{
 }
 
 .star1{
-    transform: scale(1, 1);
+    width: 200px;
     top: 400px;
     right: 40px;
+
+    opacity: 0;
 
     animation-name: floating;
     animation-duration: 3s;
@@ -220,6 +222,7 @@ nav .logo{
 }
 
 nav .cart{
+    position: relative;
     height: 30px;
     background-image: url('../img/all/cart.svg');
     background-repeat: no-repeat;
@@ -230,8 +233,8 @@ nav .cart{
 
 .cart_num{
     position: absolute;
-    right: 67px;
-    bottom: 15px;
+    right: 48px;
+    bottom: -7px;
     font-size: 12px;
     font-weight: bold;
     background-color: #3A302A;
@@ -479,6 +482,11 @@ nav .cart{
     .nav > ul > li:nth-child(2):hover .dropdown{
         display: none;
     }
+
+    .cart .cart_num{
+        right: 47px;
+        bottom: -6px;
+    }
     
     .top_botton img{
         width: 40px;
@@ -502,6 +510,10 @@ nav .cart{
         letter-spacing: 2px;
     }
 
+    h3{
+        font-size: 30px;
+    }
+
     p{
         font-size: 12px;
     }
@@ -521,7 +533,7 @@ nav .cart{
     }
     
     .footer ul li{
-        margin: 10px 10px;
+        margin: 10px 8px;
     }
 
     .footer ul li a{
