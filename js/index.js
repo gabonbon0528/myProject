@@ -132,14 +132,17 @@ window.addEventListener('load', function(){
             callback: function(){
                 flash.style.display = 'none';
                 if(windowWidth >= 1024){
-                    rolling(heaven_obj[4]);
-                    setTimeout(function(){
-                        rolling(heaven_obj[5]);
-                    });
+                    // rolling(heaven_obj[i]);
 
-                    // for(let i = 2; i < heaven_obj.length - 2; i++){
-                    //     rolling(heaven_obj[2]);
-                    // }
+                    // setTimeout(function(){
+                    //     rolling(heaven_obj[i]);
+                    // });
+
+                    for(let i = 2; i < heaven_obj.length - 2; i++){
+                        setTimeout(function(){
+                            rolling(heaven_obj[i]);
+                        }, i * 800);
+                        }
                 }else{
                     styleClear();
                 }
@@ -159,8 +162,7 @@ window.addEventListener('load', function(){
                     heaven_obj.style.top = 139 + 971 * progress + `px` ;
                     heaven_obj.style.opacity = 1;
 
-
-                    console.log(heaven_obj);
+                    // console.log(heaven_obj);
 
                     let p1 = 132 + 984 * progress * 100 / 141;
                     let p2 = 232 - (984 * (progress - 0.143) * 100 / 133)

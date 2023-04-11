@@ -581,6 +581,7 @@
     .news_content a p{
         letter-spacing: .5px;
         margin-bottom: 4px;
+        font-size: 12px;
     }
 
     .news_content .refer{
